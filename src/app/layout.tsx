@@ -21,8 +21,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "School Search Platform",
-  description: "An AI-powered platform to help parents discover, compare, and apply to the best schools for their children—based on personalized preferences, verified reviews, and real-time data.",
+  title: "Health Monitoring App",
+  description: "A comprehensive mobile health companion for real-time tracking of vitals, fitness, nutrition, and access to virtual care—empowering you to take charge of your health anytime, anywhere.",
 };
 
 export default function RootLayout({

@@ -9,7 +9,7 @@ import VantaFog from "@/components/VantaFog";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import Link from "next/link";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
-import school from "../../public/images/zachary-keimig-nxJgmZfLcJI-unsplash.jpg";
+import healthAppImage from "../../public/images/shutterstock_2480850611.jpg";
 import { CardContent, CardHeader } from "@/components/ui/card";
 import { MagicCard } from "@/components/magicui/magic-card";
 import profile from '../../public/images/profile.jpg'
@@ -22,37 +22,38 @@ import {
 import { Marquee } from "@/components/magicui/marquee";
 
 const reviews = [
-    {
-        name: "Anjali Mehta",
-        username: "@anjali_parent",
-        body: "This platform saved us weeks of research. We found the perfect CBSE school for our daughter in minutes.",
-    },
-    {
-        name: "Rahul Kapoor",
-        username: "@rahul_k",
-        body: "The expert counseling feature was incredibly helpful. It made understanding school boards so much easier.",
-    },
-    {
-        name: "Priya Singh",
-        username: "@priya_singh",
-        body: "I loved how I could compare multiple schools side-by-side. It gave me the clarity I needed as a first-time parent.",
-    },
-    {
-        name: "David Thomas",
-        username: "@david_in_blr",
-        body: "We just moved to Bangalore and had no idea where to start. This tool gave us tailored suggestions instantly!",
-    },
-    {
-        name: "Sneha Reddy",
-        username: "@sneha_r",
-        body: "Getting admission timelines and application links all in one place was a game-changer. Highly recommend!",
-    },
-    {
-        name: "Mohit Verma",
-        username: "@mohit_verma",
-        body: "I used this to shortlist boarding schools and the detailed school profiles were super informative.",
-    },
+  {
+    name: "Anjali Mehta",
+    username: "@anjali_fit",
+    body: "The real-time heart rate and blood pressure tracking has been a life-saver for me. I feel more in control of my health than ever before.",
+  },
+  {
+    name: "Rahul Kapoor",
+    username: "@rahul_active",
+    body: "The AI-powered tips and reminders keep me motivated every day. It’s like having a personal trainer and health coach in my pocket.",
+  },
+  {
+    name: "Priya Singh",
+    username: "@priya_cares",
+    body: "I use the app to monitor my mother’s vitals remotely. The caregiver access feature gives me peace of mind even when I’m away.",
+  },
+  {
+    name: "David Thomas",
+    username: "@david_runs",
+    body: "Seamless integration with my smartwatch means I don’t have to manually log anything. The automatic syncing is spot-on.",
+  },
+  {
+    name: "Sneha Reddy",
+    username: "@sneha_wellness",
+    body: "The telemedicine option saved me a clinic visit last month. I could share my health data directly with the doctor during the call.",
+  },
+  {
+    name: "Mohit Verma",
+    username: "@mohit_fitness",
+    body: "I love the detailed reports and weekly progress charts. They help me stay consistent with my fitness and nutrition goals.",
+  },
 ];
+
 
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
@@ -99,87 +100,87 @@ const ReviewCard = ({
 };
 
 const steps = [
-    {
-        title: "Step 1: Enter Your Preferences",
-        description:
-            "Start by selecting your preferred board (CBSE, ICSE, IB, State), location, budget, and must-have amenities like transport, sports, or labs.",
-    },
-    {
-        title: "Step 2: Discover Matching Schools",
-        description:
-            "The assistant instantly filters thousands of verified schools to show only those that fit your criteria, ranked by relevance.",
-    },
-    {
-        title: "Step 3: Explore School Profiles",
-        description:
-            "View detailed pages with information on academics, infrastructure, activities, faculty, reviews, and past performance.",
-    },
-    {
-        title: "Step 4: Compare & Shortlist",
-        description:
-            "Easily compare shortlisted schools side-by-side and highlight their pros and cons to make better decisions.",
-    },
-    {
-        title: "Step 5: Get Expert Guidance",
-        description:
-            "Not sure what fits best? Chat with an education counselor to get personalized recommendations tailored to your child’s needs.",
-    },
-    {
-        title: "Step 6: Track Admissions & Apply",
-        description:
-            "See real-time admission timelines, eligibility, and application links. Apply directly or track your status from your dashboard.",
-    },
+  {
+    title: "Step 1: Create Your Health Profile",
+    description:
+      "Start by adding your personal details, medical history, and health goals so the app can personalize your experience.",
+  },
+  {
+    title: "Step 2: Connect Devices & Wearables",
+    description:
+      "Sync your smartwatch, fitness band, or medical devices to enable real-time tracking of heart rate, blood pressure, sleep, and more.",
+  },
+  {
+    title: "Step 3: Monitor Your Vitals",
+    description:
+      "View live biometric data on your dashboard and get alerts if any readings go outside your healthy range.",
+  },
+  {
+    title: "Step 4: Track Fitness & Nutrition",
+    description:
+      "Log your workouts, steps, calories, meals, and hydration. Receive daily AI tips to improve your fitness and diet.",
+  },
+  {
+    title: "Step 5: Get Reminders & Insights",
+    description:
+      "Set medication reminders and receive health trend reports to stay proactive about your wellness.",
+  },
+  {
+    title: "Step 6: Access Virtual Care",
+    description:
+      "Book telemedicine consultations, share reports with doctors or caregivers, and receive personalized treatment guidance.",
+  },
 ];
+
 
 export default function Home() {
     const { theme } = useTheme();
     return (
         <main className="mx-auto">
             <VantaFog />
-            <section className="mt-20 px-4 md:px-36 flex flex-col justify-center items-center text-center">
-                <div className="group mb-5 relative mx-auto flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
-                    <span
-                        className={cn(
-                            "absolute inset-0 block h-full w-full animate-gradient rounded-[inherit] bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:300%_100%] p-[1px]"
-                        )}
-                        style={{
-                            WebkitMask:
-                                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                            WebkitMaskComposite: "destination-out",
-                            mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                            maskComposite: "subtract",
-                            WebkitClipPath: "padding-box",
-                        }}
-                    />
-                    🏫
-                    <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
-                    <AnimatedGradientText className="text-sm font-medium">
-                        India’s Smartest AI School Search Platform for Parents
-                    </AnimatedGradientText>
-                    <ChevronRight className="ml-1 size-4 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-                </div>
+           <section className="mt-20 px-4 md:px-36 flex flex-col justify-center items-center text-center">
+  <div className="group mb-5 relative mx-auto flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
+    <span
+      className={cn(
+        "absolute inset-0 block h-full w-full animate-gradient rounded-[inherit] bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:300%_100%] p-[1px]"
+      )}
+      style={{
+        WebkitMask:
+          "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+        WebkitMaskComposite: "destination-out",
+        mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+        maskComposite: "subtract",
+        WebkitClipPath: "padding-box",
+      }}
+    />
+    🩺
+    <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
+    <AnimatedGradientText className="text-sm font-medium">
+      Your AI-Powered Personal Health Companion
+    </AnimatedGradientText>
+    <ChevronRight className="ml-1 size-4 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+  </div>
 
-                <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-primary mb-6">
-                    Find the <AuroraText>Perfect School</AuroraText> for Your
-                    Child — Personalized, Verified, and Hassle-Free
-                </h1>
+  <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-primary mb-6">
+    Take Control of Your <AuroraText>Health</AuroraText> — Track, Improve, and Stay Connected
+  </h1>
 
-                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
-                    Discover, compare, and apply to top schools based on your
-                    preferences — from board and budget to real parent reviews
-                    and expert guidance.
-                </p>
+  <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
+    Monitor vitals in real time, log workouts and nutrition, get medication reminders, 
+    and connect with doctors — all from one AI-driven mobile app.
+  </p>
 
-                <div className="">
-                    <Link href="/search">
-                        <ShimmerButton className="shadow-2xl">
-                            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                                Start Searching
-                            </span>
-                        </ShimmerButton>
-                    </Link>
-                </div>
-            </section>
+  <div className="">
+    <Link href="/consult">
+      <ShimmerButton className="shadow-2xl">
+        <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+          Get Started for Free
+        </span>
+      </ShimmerButton>
+    </Link>
+  </div>
+</section>
+
 
             <section className="pt-20 lg:pt-32 pb-10 px-4 md:px-36 mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
@@ -211,34 +212,34 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="flex mt-10 flex-col md:flex-row items-center justify-between px-4 md:px-36 py-12">
-                {/* Text Section */}
-                <div className="md:w-1/2 text-center md:text-left space-y-4 order-2 md:order-1">
-                    <h2 className="text-3xl md:text-5xl font-bold text-primary">
-                        Discover the Best Schools Near You – Personalized
-                        Search, Reviews & Insights.
-                    </h2>
-                    <Link href="/search">
-                        <ShimmerButton className="shadow-2xl">
-                            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                                Find Schools
-                            </span>
-                        </ShimmerButton>
-                    </Link>
-                </div>
+           <section className="flex mt-10 flex-col md:flex-row items-center justify-between px-4 md:px-36 py-12">
+  {/* Text Section */}
+  <div className="md:w-1/2 text-center md:text-left space-y-4 order-2 md:order-1">
+    <h2 className="text-3xl md:text-5xl font-bold text-primary">
+      Take Control of Your Health – Track, Analyze & Connect in Real Time.
+    </h2>
+    <Link href="/consult">
+      <ShimmerButton className="shadow-2xl">
+        <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+          Start Monitoring
+        </span>
+      </ShimmerButton>
+    </Link>
+  </div>
 
-                {/* Image Section */}
-                <div className="md:w-1/2 mt-10 md:mt-0 order-1 md:order-2 flex justify-center">
-                    <Image
-                        src={school} // Replace with your actual school illustration path
-                        alt="School Search Illustration"
-                        className="w-full max-w-md h-96"
-                        width={10}
-                        height={10}
-                        unoptimized
-                    />
-                </div>
-            </section>
+  {/* Image Section */}
+  <div className="md:w-1/2 mt-10 md:mt-0 order-1 md:order-2 flex justify-center">
+    <Image
+      src={healthAppImage} // Replace with your actual health monitoring app illustration path
+      alt="Health Monitoring App Illustration"
+      className="w-full max-w-md h-96 object-cover"
+      width={10}
+      height={10}
+      unoptimized
+    />
+  </div>
+</section>
+
 
             <section className="mx-4 mt-20 md:mx-36">
                 <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
@@ -255,146 +256,133 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="px-4  md:px-36 mt-20">
-                <Accordion
-                    type="single"
-                    collapsible
-                    className="w-full"
-                    defaultValue="item-1"
-                >
-                    <h1 className="text-4xl font-bold">FAQ&apos;S</h1>
+           <section className="px-4 md:px-36 mt-20">
+  <Accordion
+    type="single"
+    collapsible
+    className="w-full"
+    defaultValue="item-1"
+  >
+    <h1 className="text-4xl font-bold">FAQ&apos;s</h1>
 
-                    <AccordionItem value="item-1">
-                        <AccordionTrigger>
-                            1. What is School Search Assistant?
-                        </AccordionTrigger>
-                        <AccordionContent className="flex flex-col gap-4 text-balance">
-                            <p>
-                                School Search Assistant is an AI-powered
-                                platform that helps parents discover, compare,
-                                and select the ideal school for their children.
-                                It simplifies decision-making by filtering
-                                thousands of schools based on personalized
-                                preferences like curriculum, grade, location,
-                                and budget.
-                            </p>
-                        </AccordionContent>
-                    </AccordionItem>
+    <AccordionItem value="item-1">
+      <AccordionTrigger>
+        1. What is the Health Monitoring App?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          The Health Monitoring App is your personal mobile health companion,
+          designed to track vitals, fitness, nutrition, medications, and provide
+          access to telemedicine. It empowers you to stay on top of your health
+          with real-time data and AI-driven insights.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
 
-                    <AccordionItem value="item-2">
-                        <AccordionTrigger>
-                            2. How does the search work?
-                        </AccordionTrigger>
-                        <AccordionContent className="flex flex-col gap-4 text-balance">
-                            <p>
-                                You simply enter preferences such as your city,
-                                preferred grade level, and curriculum (CBSE,
-                                ICSE, IB, State, etc.). The platform uses AI to
-                                match and rank schools that best fit your
-                                criteria.
-                            </p>
-                        </AccordionContent>
-                    </AccordionItem>
+    <AccordionItem value="item-2">
+      <AccordionTrigger>
+        2. What health metrics can I track?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          You can monitor heart rate, blood pressure, oxygen saturation,
+          temperature, sleep quality, daily activity, calories burned, water
+          intake, and medication schedules — all in one place.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
 
-                    <AccordionItem value="item-3">
-                        <AccordionTrigger>
-                            3. What types of schools are included?
-                        </AccordionTrigger>
-                        <AccordionContent className="flex flex-col gap-4 text-balance">
-                            <p>
-                                The platform includes all types of institutions
-                                — preschools, day-schools, boarding schools, and
-                                pre-university colleges across different
-                                curricula and locations in India.
-                            </p>
-                        </AccordionContent>
-                    </AccordionItem>
+    <AccordionItem value="item-3">
+      <AccordionTrigger>
+        3. Does it work with wearable devices?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          Yes! The app seamlessly integrates with popular smartwatches, fitness
+          bands, and medical devices for automatic syncing of your health data.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
 
-                    <AccordionItem value="item-4">
-                        <AccordionTrigger>
-                            4. Can I compare schools side-by-side?
-                        </AccordionTrigger>
-                        <AccordionContent className="flex flex-col gap-4 text-balance">
-                            <p>
-                                Yes, you can select multiple schools and view a
-                                side-by-side comparison of academics,
-                                infrastructure, co-curricular activities, fees,
-                                and more to help you make an informed choice.
-                            </p>
-                        </AccordionContent>
-                    </AccordionItem>
+    <AccordionItem value="item-4">
+      <AccordionTrigger>
+        4. Can I consult a doctor through the app?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          Absolutely. Our telemedicine feature allows you to book remote
+          consultations, share your health records securely, and get
+          professional advice without visiting a clinic.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
 
-                    <AccordionItem value="item-5">
-                        <AccordionTrigger>
-                            5. Does it provide admission deadlines and
-                            application links?
-                        </AccordionTrigger>
-                        <AccordionContent className="flex flex-col gap-4 text-balance">
-                            <p>
-                                Absolutely. The platform provides real-time
-                                updates on admission deadlines, eligibility
-                                requirements, and direct links to apply or
-                                inquire further with the school.
-                            </p>
-                        </AccordionContent>
-                    </AccordionItem>
+    <AccordionItem value="item-5">
+      <AccordionTrigger>
+        5. How does the app help me stay consistent?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          You can set personalized reminders for workouts, hydration, meals, and
+          medications. The app also sends motivational tips and progress reports
+          to keep you on track.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
 
-                    <AccordionItem value="item-6">
-                        <AccordionTrigger>
-                            6. Are the reviews verified?
-                        </AccordionTrigger>
-                        <AccordionContent className="flex flex-col gap-4 text-balance">
-                            <p>
-                                Yes, all reviews and ratings are verified from
-                                real parents and guardians, ensuring credibility
-                                and transparency in your decision-making.
-                            </p>
-                        </AccordionContent>
-                    </AccordionItem>
+    <AccordionItem value="item-6">
+      <AccordionTrigger>
+        6. Is my data secure and private?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          Yes. All health data is encrypted and stored securely. You have full
+          control over who can access your information, including doctors and
+          caregivers.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
 
-                    <AccordionItem value="item-7">
-                        <AccordionTrigger>
-                            7. Can I talk to a counselor for personalized help?
-                        </AccordionTrigger>
-                        <AccordionContent className="flex flex-col gap-4 text-balance">
-                            <p>
-                                Yes, the platform offers access to expert
-                                counselors who provide personalized guidance
-                                tailored to your child&apos;s academic needs,
-                                learning style, and future aspirations.
-                            </p>
-                        </AccordionContent>
-                    </AccordionItem>
+    <AccordionItem value="item-7">
+      <AccordionTrigger>
+        7. Can family members or caregivers monitor my health?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          With your permission, the app allows trusted family members or
+          caregivers to view your vitals, receive alerts, and stay updated on
+          your health status.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
 
-                    <AccordionItem value="item-8">
-                        <AccordionTrigger>
-                            8. Is the platform free to use?
-                        </AccordionTrigger>
-                        <AccordionContent className="flex flex-col gap-4 text-balance">
-                            <p>
-                                Core search and comparison features are free to
-                                use. Some premium services like expert
-                                counseling or application tracking may be
-                                offered as paid features in the future.
-                            </p>
-                        </AccordionContent>
-                    </AccordionItem>
+    <AccordionItem value="item-8">
+      <AccordionTrigger>
+        8. Is the app free to use?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          The basic tracking features are free. Advanced analytics, personalized
+          coaching, and telemedicine services may require a premium subscription.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
 
-                    <AccordionItem value="item-9">
-                        <AccordionTrigger>
-                            9. Can I track my applications on this platform?
-                        </AccordionTrigger>
-                        <AccordionContent className="flex flex-col gap-4 text-balance">
-                            <p>
-                                Yes, once you&apos;ve sent inquiries or started an
-                                application through the platform, you can track
-                                your application status and receive timely
-                                updates in one place.
-                            </p>
-                        </AccordionContent>
-                    </AccordionItem>
-                </Accordion>
-            </section>
+    <AccordionItem value="item-9">
+      <AccordionTrigger>
+        9. Who can benefit from using the app?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          The app is ideal for chronic patients, fitness enthusiasts, elderly
+          users, and healthcare providers offering remote monitoring to their
+          patients.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</section>
+
         </main>
     );
 }
