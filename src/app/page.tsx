@@ -9,178 +9,99 @@ import VantaFog from "@/components/VantaFog";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import Link from "next/link";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
-import healthAppImage from "../../public/images/shutterstock_2480850611.jpg";
+import companyNameFinderImage from "../../public/images/Company Name Finder_Helps-BA41AD4p (1).jpg";
 import { CardContent, CardHeader } from "@/components/ui/card";
 import { MagicCard } from "@/components/magicui/magic-card";
-import profile from '../../public/images/profile.jpg'
+import profile from "../../public/images/profile.jpg";
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Marquee } from "@/components/magicui/marquee";
-
-const reviews = [
-  {
-    name: "Anjali Mehta",
-    username: "@anjali_fit",
-    body: "The real-time heart rate and blood pressure tracking has been a life-saver for me. I feel more in control of my health than ever before.",
-  },
-  {
-    name: "Rahul Kapoor",
-    username: "@rahul_active",
-    body: "The AI-powered tips and reminders keep me motivated every day. It’s like having a personal trainer and health coach in my pocket.",
-  },
-  {
-    name: "Priya Singh",
-    username: "@priya_cares",
-    body: "I use the app to monitor my mother’s vitals remotely. The caregiver access feature gives me peace of mind even when I’m away.",
-  },
-  {
-    name: "David Thomas",
-    username: "@david_runs",
-    body: "Seamless integration with my smartwatch means I don’t have to manually log anything. The automatic syncing is spot-on.",
-  },
-  {
-    name: "Sneha Reddy",
-    username: "@sneha_wellness",
-    body: "The telemedicine option saved me a clinic visit last month. I could share my health data directly with the doctor during the call.",
-  },
-  {
-    name: "Mohit Verma",
-    username: "@mohit_fitness",
-    body: "I love the detailed reports and weekly progress charts. They help me stay consistent with my fitness and nutrition goals.",
-  },
-];
-
-
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
-
-const ReviewCard = ({
-    name,
-    username,
-    body,
-}: {
-    name: string;
-    username: string;
-    body: string;
-}) => {
-    return (
-        <figure
-            className={cn(
-                "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-                // light styles
-                "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-                // dark styles
-                "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
-            )}
-        >
-            <div className="flex flex-row items-center gap-2">
-                <Image
-                    className="rounded-full"
-                    width="32"
-                    height="32"
-                    alt=""
-                    src={profile}
-                />
-                <div className="flex flex-col">
-                    <figcaption className="text-sm font-medium dark:text-white">
-                        {name}
-                    </figcaption>
-                    <p className="text-xs font-medium dark:text-white/40">
-                        {username}
-                    </p>
-                </div>
-            </div>
-            <blockquote className="mt-2 text-sm">{body}</blockquote>
-        </figure>
-    );
-};
 
 const steps = [
-  {
-    title: "Step 1: Create Your Health Profile",
-    description:
-      "Start by adding your personal details, medical history, and health goals so the app can personalize your experience.",
-  },
-  {
-    title: "Step 2: Connect Devices & Wearables",
-    description:
-      "Sync your smartwatch, fitness band, or medical devices to enable real-time tracking of heart rate, blood pressure, sleep, and more.",
-  },
-  {
-    title: "Step 3: Monitor Your Vitals",
-    description:
-      "View live biometric data on your dashboard and get alerts if any readings go outside your healthy range.",
-  },
-  {
-    title: "Step 4: Track Fitness & Nutrition",
-    description:
-      "Log your workouts, steps, calories, meals, and hydration. Receive daily AI tips to improve your fitness and diet.",
-  },
-  {
-    title: "Step 5: Get Reminders & Insights",
-    description:
-      "Set medication reminders and receive health trend reports to stay proactive about your wellness.",
-  },
-  {
-    title: "Step 6: Access Virtual Care",
-    description:
-      "Book telemedicine consultations, share reports with doctors or caregivers, and receive personalized treatment guidance.",
-  },
+    {
+        title: "Step 1: Enter Your Desired Company Name",
+        description:
+            "Start by typing the company name you have in mind. Our system will prepare to run domain, MCA, and trademark checks instantly.",
+    },
+    {
+        title: "Step 2: Check Domain Availability",
+        description:
+            "We’ll scan across multiple extensions like .com, .in, and others to see if your desired domain is available for registration.",
+    },
+    {
+        title: "Step 3: Validate with MCA Database",
+        description:
+            "Our tool checks the Ministry of Corporate Affairs’ official database to ensure the name meets eligibility rules for incorporation in India.",
+    },
+    {
+        title: "Step 4: Identify Conflicts & Restrictions",
+        description:
+            "We flag similar or reserved names and highlight any MCA or trademark restrictions that could cause legal issues later.",
+    },
+    {
+        title: "Step 5: Get Brandable Alternatives",
+        description:
+            "If your original choice isn’t available, we’ll generate creative, compliant, and domain-ready alternatives for you to consider.",
+    },
+    {
+        title: "Step 6: Download a Compliance Report",
+        description:
+            "Receive a one-click report summarizing your chosen name’s domain, MCA, and trademark status—ready for incorporation or branding.",
+    },
 ];
-
 
 export default function Home() {
     const { theme } = useTheme();
     return (
         <main className="mx-auto">
             <VantaFog />
-           <section className="mt-20 px-4 md:px-36 flex flex-col justify-center items-center text-center">
-  <div className="group mb-5 relative mx-auto flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
-    <span
-      className={cn(
-        "absolute inset-0 block h-full w-full animate-gradient rounded-[inherit] bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:300%_100%] p-[1px]"
-      )}
-      style={{
-        WebkitMask:
-          "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-        WebkitMaskComposite: "destination-out",
-        mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-        maskComposite: "subtract",
-        WebkitClipPath: "padding-box",
-      }}
-    />
-    🩺
-    <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
-    <AnimatedGradientText className="text-sm font-medium">
-      Your AI-Powered Personal Health Companion
-    </AnimatedGradientText>
-    <ChevronRight className="ml-1 size-4 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-  </div>
+            <section className="mt-20 px-4 md:px-36 flex flex-col justify-center items-center text-center">
+                <div className="group mb-5 relative mx-auto flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
+                    <span
+                        className={cn(
+                            "absolute inset-0 block h-full w-full animate-gradient rounded-[inherit] bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:300%_100%] p-[1px]"
+                        )}
+                        style={{
+                            WebkitMask:
+                                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                            WebkitMaskComposite: "destination-out",
+                            mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                            maskComposite: "subtract",
+                            WebkitClipPath: "padding-box",
+                        }}
+                    />
+                    🏢
+                    <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
+                    <AnimatedGradientText className="text-sm font-medium">
+                        Your AI-Powered Company Name Finder
+                    </AnimatedGradientText>
+                    <ChevronRight className="ml-1 size-4 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+                </div>
 
-  <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-primary mb-6">
-    Take Control of Your <AuroraText>Health</AuroraText> — Track, Improve, and Stay Connected
-  </h1>
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-primary mb-6">
+                    Find Your <AuroraText>Perfect Company Name</AuroraText> —
+                    Unique, Legal & Domain-Ready
+                </h1>
 
-  <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
-    Monitor vitals in real time, log workouts and nutrition, get medication reminders, 
-    and connect with doctors — all from one AI-driven mobile app.
-  </p>
+                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
+                    Instantly check domain availability, validate MCA
+                    compliance, screen trademarks, and get brandable name
+                    suggestions — all in one powerful tool for entrepreneurs.
+                </p>
 
-  <div className="">
-    <Link href="/consult">
-      <ShimmerButton className="shadow-2xl">
-        <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-          Get Started for Free
-        </span>
-      </ShimmerButton>
-    </Link>
-  </div>
-</section>
-
+                <div className="">
+                    <Link href="/search">
+                        <ShimmerButton className="shadow-2xl">
+                            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                                Check My Company Name
+                            </span>
+                        </ShimmerButton>
+                    </Link>
+                </div>
+            </section>
 
             <section className="pt-20 lg:pt-32 pb-10 px-4 md:px-36 mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
@@ -212,177 +133,172 @@ export default function Home() {
                 </div>
             </section>
 
-           <section className="flex mt-10 flex-col md:flex-row items-center justify-between px-4 md:px-36 py-12">
-  {/* Text Section */}
-  <div className="md:w-1/2 text-center md:text-left space-y-4 order-2 md:order-1">
-    <h2 className="text-3xl md:text-5xl font-bold text-primary">
-      Take Control of Your Health – Track, Analyze & Connect in Real Time.
-    </h2>
-    <Link href="/consult">
-      <ShimmerButton className="shadow-2xl">
-        <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-          Start Monitoring
-        </span>
-      </ShimmerButton>
-    </Link>
-  </div>
+            <section className="flex mt-10 flex-col md:flex-row items-center justify-between px-4 md:px-36 py-12">
+                {/* Text Section */}
+                <div className="md:w-1/2 text-center md:text-left space-y-4 order-2 md:order-1">
+                    <h2 className="text-3xl md:text-5xl font-bold text-primary">
+                        Find the Perfect Company Name – MCA Compliant & Domain
+                        Ready.
+                    </h2>
+                    <Link href="/search">
+                        <ShimmerButton className="shadow-2xl">
+                            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                                Start Name Search
+                            </span>
+                        </ShimmerButton>
+                    </Link>
+                </div>
 
-  {/* Image Section */}
-  <div className="md:w-1/2 mt-10 md:mt-0 order-1 md:order-2 flex justify-center">
-    <Image
-      src={healthAppImage} // Replace with your actual health monitoring app illustration path
-      alt="Health Monitoring App Illustration"
-      className="w-full max-w-md h-96 object-cover"
-      width={10}
-      height={10}
-      unoptimized
-    />
-  </div>
-</section>
-
-
-            <section className="mx-4 mt-20 md:mx-36">
-                <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-                    <Marquee pauseOnHover className="[--duration:20s]">
-                        {firstRow.map((review) => (
-                            <ReviewCard key={review.username} {...review} />
-                        ))}
-                    </Marquee>
-                    <Marquee reverse pauseOnHover className="[--duration:20s]">
-                        {secondRow.map((review) => (
-                            <ReviewCard key={review.username} {...review} />
-                        ))}
-                    </Marquee>
+                {/* Image Section */}
+                <div className="md:w-1/2 mt-10 md:mt-0 order-1 md:order-2 flex justify-center">
+                    <Image
+                        src={companyNameFinderImage} // Replace with your Company Name Finder illustration path
+                        alt="Company Name Finder Illustration"
+                        className="w-full max-w-md h-96 object-contain"
+                        width={10}
+                        height={10}
+                        unoptimized
+                    />
                 </div>
             </section>
 
-           <section className="px-4 md:px-36 mt-20">
-  <Accordion
-    type="single"
-    collapsible
-    className="w-full"
-    defaultValue="item-1"
-  >
-    <h1 className="text-4xl font-bold">FAQ&apos;s</h1>
+            <section className="px-4 md:px-36 mt-20">
+                <Accordion
+                    type="single"
+                    collapsible
+                    className="w-full"
+                    defaultValue="item-1"
+                >
+                    <h1 className="text-4xl font-bold">FAQ&apos;s</h1>
 
-    <AccordionItem value="item-1">
-      <AccordionTrigger>
-        1. What is the Health Monitoring App?
-      </AccordionTrigger>
-      <AccordionContent className="flex flex-col gap-4 text-balance">
-        <p>
-          The Health Monitoring App is your personal mobile health companion,
-          designed to track vitals, fitness, nutrition, medications, and provide
-          access to telemedicine. It empowers you to stay on top of your health
-          with real-time data and AI-driven insights.
-        </p>
-      </AccordionContent>
-    </AccordionItem>
+                    <AccordionItem value="item-1">
+                        <AccordionTrigger>
+                            1. What is the Company Name Finder?
+                        </AccordionTrigger>
+                        <AccordionContent className="flex flex-col gap-4 text-balance">
+                            <p>
+                                Company Name Finder is a tool that helps
+                                entrepreneurs select unique and legally
+                                compliant company names in India. It checks
+                                domain availability, MCA compliance, trademark
+                                conflicts, and even generates alternative name
+                                suggestions.
+                            </p>
+                        </AccordionContent>
+                    </AccordionItem>
 
-    <AccordionItem value="item-2">
-      <AccordionTrigger>
-        2. What health metrics can I track?
-      </AccordionTrigger>
-      <AccordionContent className="flex flex-col gap-4 text-balance">
-        <p>
-          You can monitor heart rate, blood pressure, oxygen saturation,
-          temperature, sleep quality, daily activity, calories burned, water
-          intake, and medication schedules — all in one place.
-        </p>
-      </AccordionContent>
-    </AccordionItem>
+                    <AccordionItem value="item-2">
+                        <AccordionTrigger>
+                            2. How does it check MCA compliance?
+                        </AccordionTrigger>
+                        <AccordionContent className="flex flex-col gap-4 text-balance">
+                            <p>
+                                The tool validates proposed names against MCA’s
+                                official database and rules, ensuring your name
+                                meets all legal requirements for incorporation
+                                and avoids restricted or prohibited terms.
+                            </p>
+                        </AccordionContent>
+                    </AccordionItem>
 
-    <AccordionItem value="item-3">
-      <AccordionTrigger>
-        3. Does it work with wearable devices?
-      </AccordionTrigger>
-      <AccordionContent className="flex flex-col gap-4 text-balance">
-        <p>
-          Yes! The app seamlessly integrates with popular smartwatches, fitness
-          bands, and medical devices for automatic syncing of your health data.
-        </p>
-      </AccordionContent>
-    </AccordionItem>
+                    <AccordionItem value="item-3">
+                        <AccordionTrigger>
+                            3. Does it check domain name availability?
+                        </AccordionTrigger>
+                        <AccordionContent className="flex flex-col gap-4 text-balance">
+                            <p>
+                                Yes! It scans popular domain extensions like{" "}
+                                <strong>.com</strong> and <strong>.in</strong>{" "}
+                                so you can secure a matching online identity for
+                                your business instantly.
+                            </p>
+                        </AccordionContent>
+                    </AccordionItem>
 
-    <AccordionItem value="item-4">
-      <AccordionTrigger>
-        4. Can I consult a doctor through the app?
-      </AccordionTrigger>
-      <AccordionContent className="flex flex-col gap-4 text-balance">
-        <p>
-          Absolutely. Our telemedicine feature allows you to book remote
-          consultations, share your health records securely, and get
-          professional advice without visiting a clinic.
-        </p>
-      </AccordionContent>
-    </AccordionItem>
+                    <AccordionItem value="item-4">
+                        <AccordionTrigger>
+                            4. Can it detect trademark conflicts?
+                        </AccordionTrigger>
+                        <AccordionContent className="flex flex-col gap-4 text-balance">
+                            <p>
+                                Absolutely. It checks your proposed names
+                                against the trademark database to ensure you’re
+                                not infringing on existing registered brands,
+                                reducing legal risks.
+                            </p>
+                        </AccordionContent>
+                    </AccordionItem>
 
-    <AccordionItem value="item-5">
-      <AccordionTrigger>
-        5. How does the app help me stay consistent?
-      </AccordionTrigger>
-      <AccordionContent className="flex flex-col gap-4 text-balance">
-        <p>
-          You can set personalized reminders for workouts, hydration, meals, and
-          medications. The app also sends motivational tips and progress reports
-          to keep you on track.
-        </p>
-      </AccordionContent>
-    </AccordionItem>
+                    <AccordionItem value="item-5">
+                        <AccordionTrigger>
+                            5. What if my chosen name is unavailable?
+                        </AccordionTrigger>
+                        <AccordionContent className="flex flex-col gap-4 text-balance">
+                            <p>
+                                The system will instantly suggest brandable
+                                alternatives that are available both legally and
+                                as a domain, helping you find a great option
+                                without delays.
+                            </p>
+                        </AccordionContent>
+                    </AccordionItem>
 
-    <AccordionItem value="item-6">
-      <AccordionTrigger>
-        6. Is my data secure and private?
-      </AccordionTrigger>
-      <AccordionContent className="flex flex-col gap-4 text-balance">
-        <p>
-          Yes. All health data is encrypted and stored securely. You have full
-          control over who can access your information, including doctors and
-          caregivers.
-        </p>
-      </AccordionContent>
-    </AccordionItem>
+                    <AccordionItem value="item-6">
+                        <AccordionTrigger>
+                            6. Who can use Company Name Finder?
+                        </AccordionTrigger>
+                        <AccordionContent className="flex flex-col gap-4 text-balance">
+                            <p>
+                                It’s ideal for entrepreneurs, startups, branding
+                                agencies, and incorporation service providers
+                                who want to ensure a smooth, conflict-free
+                                naming process.
+                            </p>
+                        </AccordionContent>
+                    </AccordionItem>
 
-    <AccordionItem value="item-7">
-      <AccordionTrigger>
-        7. Can family members or caregivers monitor my health?
-      </AccordionTrigger>
-      <AccordionContent className="flex flex-col gap-4 text-balance">
-        <p>
-          With your permission, the app allows trusted family members or
-          caregivers to view your vitals, receive alerts, and stay updated on
-          your health status.
-        </p>
-      </AccordionContent>
-    </AccordionItem>
+                    <AccordionItem value="item-7">
+                        <AccordionTrigger>
+                            7. How long does the name check process take?
+                        </AccordionTrigger>
+                        <AccordionContent className="flex flex-col gap-4 text-balance">
+                            <p>
+                                Most checks are completed instantly, and you’ll
+                                receive a consolidated report summarizing MCA,
+                                domain, and trademark statuses in just a few
+                                seconds.
+                            </p>
+                        </AccordionContent>
+                    </AccordionItem>
 
-    <AccordionItem value="item-8">
-      <AccordionTrigger>
-        8. Is the app free to use?
-      </AccordionTrigger>
-      <AccordionContent className="flex flex-col gap-4 text-balance">
-        <p>
-          The basic tracking features are free. Advanced analytics, personalized
-          coaching, and telemedicine services may require a premium subscription.
-        </p>
-      </AccordionContent>
-    </AccordionItem>
+                    <AccordionItem value="item-8">
+                        <AccordionTrigger>
+                            8. Is my search data stored or shared?
+                        </AccordionTrigger>
+                        <AccordionContent className="flex flex-col gap-4 text-balance">
+                            <p>
+                                No. Your search data is kept private and is not
+                                shared with third parties, ensuring your
+                                business ideas remain confidential.
+                            </p>
+                        </AccordionContent>
+                    </AccordionItem>
 
-    <AccordionItem value="item-9">
-      <AccordionTrigger>
-        9. Who can benefit from using the app?
-      </AccordionTrigger>
-      <AccordionContent className="flex flex-col gap-4 text-balance">
-        <p>
-          The app is ideal for chronic patients, fitness enthusiasts, elderly
-          users, and healthcare providers offering remote monitoring to their
-          patients.
-        </p>
-      </AccordionContent>
-    </AccordionItem>
-  </Accordion>
-</section>
-
+                    <AccordionItem value="item-9">
+                        <AccordionTrigger>
+                            9. Is the tool free to use?
+                        </AccordionTrigger>
+                        <AccordionContent className="flex flex-col gap-4 text-balance">
+                            <p>
+                                Basic name availability checks are free.
+                                Advanced reports with trademark analysis and MCA
+                                compliance verification may require a premium
+                                plan.
+                            </p>
+                        </AccordionContent>
+                    </AccordionItem>
+                </Accordion>
+            </section>
         </main>
     );
 }

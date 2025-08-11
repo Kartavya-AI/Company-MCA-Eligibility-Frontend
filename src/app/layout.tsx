@@ -21,8 +21,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Health Monitoring App",
-  description: "A comprehensive mobile health companion for real-time tracking of vitals, fitness, nutrition, and access to virtual care—empowering you to take charge of your health anytime, anywhere.",
+  title: "Company Name Finder",
+  description: "Assists entrepreneurs in selecting unique company names that are domain-available and MCA-compliant, helping you launch your business quickly and legally in India.",
 };
 
 export default function RootLayout({

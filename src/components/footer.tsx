@@ -8,10 +8,10 @@ function Footer() {
                 {/* Logo + Description */}
                 <div>
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                        Health Monitoring App
+                        Company Name Finder
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed">
-                        A comprehensive mobile health companion for real-time tracking of vitals, fitness, nutrition, and access to virtual care—empowering you to take charge of your health anytime, anywhere.
+                        Assists entrepreneurs in selecting unique company names that are domain-available and MCA-compliant, helping you launch your business quickly and legally in India.
                     </p>
                 </div>
 
@@ -28,22 +28,22 @@ function Footer() {
                         </li>
                         <li>
                             <a href="#" className="hover:underline">
-                                Track Vitals
+                                Name Availability Check
                             </a>
                         </li>
                         <li>
                             <a href="#" className="hover:underline">
-                                Activity & Fitness
+                                MCA Compliance
                             </a>
                         </li>
                         <li>
                             <a href="#" className="hover:underline">
-                                Nutrition & Medication
+                                Trademark Search
                             </a>
                         </li>
                         <li>
                             <a href="#" className="hover:underline">
-                                Virtual Care
+                                Reports
                             </a>
                         </li>
                     </ul>
@@ -81,7 +81,7 @@ function Footer() {
 
             {/* Bottom note */}
             <div className="mt-10 text-center text-xs text-gray-500 dark:text-gray-500">
-                © {new Date().getFullYear()} Health Monitoring App. All rights reserved.
+                © {new Date().getFullYear()} Company Name Finder. All rights reserved.
             </div>
         </footer>
     );
